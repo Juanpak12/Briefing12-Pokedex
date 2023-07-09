@@ -1,7 +1,7 @@
 //Se crea una constante poke_container que hace referencia al elemento HTML con el id "poke-container".
 const poke_container = document.getElementById('poke-container');
-//Se define la cantidad de Pokémon que se obtendrán, en este caso, se establece en 300.
-const pokemon_count = 300;
+//Se define la cantidad de Pokémon que se obtendrán, en este caso, se establece en 600.
+const pokemon_count = 600;
 //Se crea un objeto colors que asocia cada tipo de Pokémon con un color específico.
 const colors = {
   fire: '#FDDFDF',
@@ -60,12 +60,10 @@ const createPokemonCard = (pokemon) => {
 	const color = colors[type];
 	//Se establece el color de fondo del elemento pokemonElement utilizando style.backgroundColor.
 	pokemonElement.style.backgroundColor = color;
-	
-	
-
+	// otra parte donde se pueden sacar las imagenes <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}">
 	const pokemonHTML = `
     <div class="img-container">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg" alt="${pokemon.name}">
     </div>
     <div class="info">
       <span class="number">${pokemon.id.toString().padStart(3, '0')}</span>

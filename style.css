@@ -48,6 +48,7 @@ h1 {
 .pokemon .img-container img {
   max-width: 90%;
   margin-top: 20px;
+  max-height: 120px;
 }
 
 .pokemon .info {
