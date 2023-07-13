@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
 }
-
+/*Se aplica diseño al body con la propiedad display flex y le aplicamos distinto tipo de fuente */
 body {
   background: #efefbb;
   background: linear-gradient(to right, #d4d3dd, #efefbb);
@@ -14,11 +14,11 @@ body {
   justify-content: center;
   margin: 0;
 }
-
+/*Titulo Pokedex*/
 h1 {
   letter-spacing: 3px;
 }
-
+/*Container que contiene todas las cartas*/
 .poke-container {
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@ h1 {
   margin: 0 auto;
   max-width: 1200px;
 }
-
+/*Estilo para cartas pokemon */
 .pokemon {
   background-color: #eee;
   border-radius: 10px;
@@ -36,7 +36,7 @@ h1 {
   padding: 20px;
   text-align: center;
 }
-
+/*Estilo de imagen pokemon*/
 .pokemon .img-container {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
@@ -50,23 +50,23 @@ h1 {
   margin-top: 20px;
   max-height: 120px;
 }
-
+/*Estilo para la informacion del pokemon*/
 .pokemon .info {
   margin-top: 20px;
 }
-
+/*Numero de pokemon*/
 .pokemon .info .number {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 0.8em;
 }
-
+/*Nombre del pokemon*/
 .pokemon .info .name {
   margin: 15px 0 7px;
   letter-spacing: 1px;
 }
-
+/*Tipo de pokemon*/
 .pokemon .info .type {
   font-size: 0.8em;
 }

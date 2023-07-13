@@ -1,40 +1,38 @@
-Instrucciones de Implementación
+1. const poke_container = document.getElementById('poke-container'). Se declara una constante poke_container para llamar el elemento id que contiene el HTML.
 
-Bienvenidos al reto 19, para cumplirlo deberán seguir lo siguiente:
+2. const pokemon_count. Se define la cantidad de Pokémon que se obtendrán, en este caso, se establece en 150.
 
-1. Ver el video de explicación de reto.
+3. const colors  Se crea una constante colors que asocia cada tipo de Pokémon con un color específico.
 
-2. Tienen los siguientes recursos: HTML y parte del css 
-   
-   * Acá les damos una estructura y una guía de cómo deben hacerlo sientanse libres de cambiar el código en donde necesiten para llegar al resultado final.
+4. const main_types. Se crea un array main_types que contiene los nombres de los tipos de Pokémon.
 
-3. Resultado: El reto debe ser igual al que visualizan en el video.
+5. const fetchPokemons. Se declara una función fetchPokemons que utiliza el bucle for para iterar desde 1 hasta la cantidad de Pokémon especificada. await getPokemon. Dentro del bucle, se llama a la función getPokemon para obtener la información de cada Pokémon.
 
-¡HINTS!
+6. const getPokemon = async (id). Se declara una función getPokemon que recibe un ID como argumento.
 
-CSS
+7. const url = `https://pokeapi.co/api/v2/pokemon/${id}`; Se construye la URL de la API utilizando el ID proporcionado.
 
--  El CSS está completo pero deben practicar y entender cómo se crearon las cards en este reto
+8. const res = await fetch(url). Se utiliza fetch para realizar una solicitud HTTP a la URL y se espera la respuesta utilizando await.
 
+9. const data = await res.json(). Se convierte la respuesta en formato JSON utilizando el método json().
 
-JS
+10. createPokemonCard(data). Se llama a la función createPokemonCard pasando los datos del Pokémon obtenidos como argumento.
 
-la API que se usará es:
+11. const createPokemonCard. Se declara una función createPokemonCard que recibe un objeto pokemon como argumento.
 
-pokeapi.co
+12. const pokemonElement = document.createElement('div');
+	pokemonElement.classList.add('pokemon'). Se crea un elemento <div> utilizando document.createElement() y se le añade la clase "pokemon".
 
-Deberás crear createPokemonCard: se encargará de
+13. const pokemonTypes = pokemon.types.map((type) => type.type.name). Se extraen los tipos de Pokémon del objeto pokemon y se almacenan en el array pokemonTypes.
 
-Traer el nombre del pokemon
-el id
-el tipo de pokemon, este será útil para hacer match con el fondo que debe tener cada pokemon
+14. const type = main_types.find((type) => pokemonTypes.indexOf(type) > -1). Se busca el tipo principal del Pokémon utilizando main_types.find() y comparando los tipos con pokemonTypes.
 
-con esta información podrás construir la card de cada uno de ellos.
+15. const color = colors[type]. Se obtiene el color correspondiente al tipo encontrado.
 
+16. pokemonElement.style.backgroundColor = color. Se establece el color de fondo del elemento pokemonElement utilizando style.backgroundColor.
 
+17.  pokemonElement.innerHTML = pokemonHTML. Se establece el contenido HTML del elemento pokemonElement utilizando innerHTML.
 
+18.  poke_container.appendChild(pokemonElement). Se añade el elemento pokemonElement como hijo del contenedor poke_container utilizando appendChild()
 
-   
-
-
-
+19. fetchPokemons(). Finalmente, se llama a la función fetchPokemons para comenzar a obtener los datos de los Pokémon y crear las tarjetas correspondientes en el contenedor.

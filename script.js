@@ -1,8 +1,8 @@
 // se realia ayuda con link https://www.youtube.com/watch?v=ydcm7GECaAI&ab_channel=Bluuweb
 //Se crea una constante poke_container que hace referencia al elemento HTML con el id "poke-container".
 const poke_container = document.getElementById('poke-container');
-//Se define la cantidad de Pokémon que se obtendrán, en este caso, se establece en 600.
-const pokemon_count = 600;
+//Se define la cantidad de Pokémon que se obtendrán, en este caso, se establece en 300.
+const pokemon_count = 300;
 //Se crea un objeto colors que asocia cada tipo de Pokémon con un color específico.
 const colors = {
   fire: '#FDDFDF',
