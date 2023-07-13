@@ -1,3 +1,4 @@
+// se realia ayuda con link https://www.youtube.com/watch?v=ydcm7GECaAI&ab_channel=Bluuweb
 //Se crea una constante poke_container que hace referencia al elemento HTML con el id "poke-container".
 const poke_container = document.getElementById('poke-container');
 //Se define la cantidad de Pokémon que se obtendrán, en este caso, se establece en 600.
@@ -40,14 +41,6 @@ const getPokemon = async (id) => {
 	createPokemonCard(data);
 };
 // Se declara una función createPokemonCard que recibe un objeto pokemon como argumento.
-
-
-
-
-
-
-
-
 const createPokemonCard = (pokemon) => {
 	//Se crea un elemento <div> utilizando document.createElement() y se le añade la clase "pokemon".
 	const pokemonElement = document.createElement('div');
